@@ -1,0 +1,133 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*napisz program który za pomocą instrukcji do while dla danych wartośći zeminiajaących się w przedziale od 0 do 15 oblicza wartość funkci y= 4x
+
+            int x = 0;
+           
+               do
+            {
+                int y = 4 * x;
+                Console.WriteLine("x = {0} y = {1}", x, y);
+                x++;
+                    } while
+                    (x <= 15);
+            Console.ReadKey(); 
+            */
+
+            //napisz program znajdujący się powyzej za pomocom pentli while//
+            /*
+            int x = 0;
+                
+
+            while (x <= 15)
+            {
+                int y = 4 * x;
+                Console.WriteLine("x = {0} y = {1}", x, y);
+                x++;
+            }
+            Console.ReadKey();
+                */
+            //napisz program któuy za pomoca instrukcji while dla danych wartosci x zmieniajacych sie w przedziale od 1 do 50 obliczy ich sume//
+
+            /*  int x = 1;
+              int suma = 0;
+
+
+              while (x <= 50)
+              {
+                  suma = suma + x;
+
+                  x++;
+
+              }
+              Console.WriteLine("suma liczb wynosi= " + suma);
+              Console.ReadKey();
+              */
+            //napisz program któy za pomoca petli for zsumuje liczby niepatrzyste z przedziału od 1 do 10//
+            /*
+            int x = 0;
+            int suma = 0;
+
+
+            for (x = 0; x <= 10; x++)
+            {
+                if ((x % 2) == 1)
+
+
+                {
+
+                    suma = suma + x;
+
+                }
+
+            }
+            Console.WriteLine("suma wynosi: " + suma);
+            Console.ReadKey();
+            */
+
+            // 2 pętle do while tabliczka mnożenia elomorelo z fartem"
+
+            /* int x = 10, row, col;
+             row = 1;
+             do
+             {
+                 col = 1;
+                 do
+                 {
+                     Console.Write(row * col + "\t");
+
+                     col++;
+                 } while (col <= x);
+                 row++;
+                 Console.WriteLine();
+             }
+             while (row <= x);
+             Console.ReadKey();
+             }   
+             }
+             */
+            //napisz program który wyświetli duze litery alfabetu od a do z i od z do a z wykorzystaniem pętli for//
+            //A,B,C.....Z.//
+            //Z,Y,X,....A.//
+
+            /*  char znak = 'A' ;
+                 for (znak = 'A'; znak < 'Z'; znak++)
+              {
+                  Console.WriteLine(znak);
+
+
+              }
+              Console.WriteLine(znak+".");
+
+              for (znak = 'Z'; znak > 'A'; znak--)
+              {
+                  Console.WriteLine(znak);
+              }
+              Console.WriteLine(znak + ".");
+                  Console.ReadKey();
+                  */
+            int j = 1;
+            for (; j <= 10; j++)
+            {
+                if (j == 2 || j == 5 || j == 2)
+                    continue;
+                else
+                    Console.Write("{0} ", j);
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+       
+    }
+    
+}
