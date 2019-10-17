@@ -1,0 +1,18 @@
+int x = 10, row, col;
+            row = 1;
+            do
+            {
+                col = 1;
+                do
+                {
+                    Console.Write(row * col + "\t");
+
+                    col++;
+                } while (col <= x);
+                row++;
+                Console.WriteLine();
+            }
+            while (row <= x);
+            Console.ReadKey();
+            }   
+            }
