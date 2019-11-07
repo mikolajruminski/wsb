@@ -1,0 +1,58 @@
+  //typ wartościowy//
+            int a = 10;
+                int b = a;
+
+            a--; //odjęcie 1 od zmiennej a//
+            b++; //dodanie 1 do zmiennej b//
+            Console.WriteLine("Zmienna a: {0}" ,a);
+            Console.WriteLine("Zmienna b: {0}", b);
+
+            //typ referencyjny
+            int[] tabA = { 2, 2, 2, };
+            int[] tabB = tabA;
+
+            
+            tabA[2] = 10;
+            tabB[0] = 8;
+            Console.WriteLine("wyświetlenie tablicy A:");
+
+            foreach (int item in tabA)
+            {
+                Console.Write("{0}", item);
+            }
+
+            Console.WriteLine("\n\n wyświetlenie tablicy B:");
+            foreach (int item in tabA)
+            {
+                Console.Write("{0}", item);
+            }
+
+            Console.WriteLine();
+            //kopiowanie tablic
+
+            int[] tab = { 1, 2, 3, 4, 5 };
+            int[] tabCopy = new int[5];
+            foreach (int item in tabCopy)
+            {
+                Console.Write("{0}", item);
+            }
+
+            tab.CopyTo(tabCopy, 0);
+            foreach (int item in tabCopy)
+            {
+                Console.Write(" {0} ", item);
+            }
+            //sposób 2 kopiowania tablic
+
+            Array.Copy(tab, tabCopy, 2 );
+            // Array.Copy(tab, tabCopy, tab.Length);
+            foreach (int item in tabCopy)
+            {
+                Console.Write("{0} ", item);
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
