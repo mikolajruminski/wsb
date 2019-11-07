@@ -1,0 +1,48 @@
+uint x = 10;
+            try
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("Podaj dzień tygodnia (1-5): ");
+                string str = Console.ReadLine();
+                x = uint.Parse(str);
+            }
+            catch
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("error");
+            }
+            finally
+            {
+                Console.WriteLine("x = {0}", x);
+            }
+            Console.ReadKey();
+            
+//**************************************************//
+            switch (x)
+            {
+                case 1:
+                    Console.WriteLine("Poniedziałek");
+                    break;
+                case 2:
+                    Console.WriteLine("wtorek");
+                    break;
+                case 3:
+                    Console.WriteLine("środa");
+                    break;
+                case 4:
+                    Console.WriteLine("czwartek");
+                    break;
+                case 5:
+                    Console.WriteLine("piątek");
+                    break;
+                case 6:
+                    throw new System.Exception("Masz już weekend, błędne dane");
+                    break;
+                case 7:
+                    throw new System.Exception("Masz już weekend, niedziela");
+                    break;
+ 
+                default:
+                    throw new System.Exception("hehexd");
+                    break;
+            }
