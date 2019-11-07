@@ -1,0 +1,30 @@
+  uint number;
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("Wprowadź liczbę cakowitą: ");
+                 string x = Console.ReadLine();
+
+
+                try
+                {
+                    number = uint.Parse(x);
+                    
+                    break;
+                }
+                catch (SystemException e)
+                {
+                    //Console.Writeline("error");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine("Podałeś błędne dane: {0}", x);
+                }
+
+
+            }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Prawidłowe dane: {0}", number);
+            Console.ReadKey();
+        }
+    }
+}
