@@ -1,0 +1,36 @@
+
+            uint number;
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("Wprowadź liczbę całkowitą: ");
+                string x = Console.ReadLine();
+                try
+                {
+                    number = uint.Parse(x);
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("Wprowadź liczbę w poprawnym formacie np. 4\n");
+
+                }
+                catch (OverflowException)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Wprowadzona liczba jest poza dopuszczalnym zakresem");
+                    Console.WriteLine("Zakres liczb: <0,4 294 967 295>\n");
+
+                }
+                catch (ArgumentNullException)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Wprowadzona wartość nie może być pusta\n");
+                    
+                }
+                
+            }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Liczba całkowita: {0}", number);
+            Console.ReadKey();
