@@ -1,0 +1,119 @@
+
+            //napisz kalkulator uwzglednij wyjątki
+            //menu wyboru działania
+            //użytkownik może zamknąc program wpisując XD
+
+
+            int number;
+
+
+
+            do
+            {
+
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Co chcesz zrobić?:");
+                Console.WriteLine("1.Mnożenie");
+                Console.WriteLine("2.Dzielenie");
+                Console.WriteLine("3.Dodawanie");
+                Console.WriteLine("4.Odejmowanie");
+                Console.WriteLine("Wpisz 'X' aby wyjść");
+                Console.Write("Wpisz liczbę 1-4: ");
+
+                string x = Console.ReadLine();
+
+                
+                
+
+                    try
+                    {
+
+                        number = int.Parse(x);
+                        break;
+                    }
+
+                    catch (System.FormatException)
+                    {
+                        Console.WriteLine("Niepoprawne dane, spróbuj ponownie");
+                        
+                    }
+
+                
+                    switch (number)
+                    {
+                        case 1:
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Wprowadź liczbę: ");
+                            Console.Write("a: ");
+                            string a = Console.ReadLine();
+                            Console.Write("b: ");
+                            string b = Console.ReadLine();
+                            int a1 = int.Parse(a);
+                            int b1 = int.Parse(b);
+                            int wynik1 = a1 * b1;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Twój wynik to: {0}", wynik1);
+                            break;
+                        case 2:
+                            //dzielenie z floatem
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Wprowadź liczbę: ");
+                            Console.Write("a: ");
+                            string c = Console.ReadLine();
+                            Console.Write("b: ");
+                            string d = Console.ReadLine();
+                            float c1 = float.Parse(c);
+                            float d1 = float.Parse(d);
+                            float wynik2 = c1 / d1;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Twój wynik to: {0}", wynik2);
+                            break;
+                        case 3:
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Wprowadź liczbę: ");
+                            Console.Write("a: ");
+                            string e = Console.ReadLine();
+                            Console.Write("b: ");
+                            string f = Console.ReadLine();
+                            int e1 = int.Parse(e);
+                            int f1 = int.Parse(f);
+                            int wynik3 = e1 + f1;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Twój wynik to: {0}", wynik3);
+                            break;
+                        case 4:
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Wprowadź liczbę: ");
+                            Console.Write("a: ");
+                            string g = Console.ReadLine();
+                            Console.Write("b: ");
+                            string h = Console.ReadLine();
+                            int g1 = int.Parse(g);
+                            int h1 = int.Parse(h);
+                            int wynik4 = g1 - h1;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Wynik Twojego odejmowania to: {0}", wynik4);
+                            break;
+                        case 'X':
+                            System.Diagnostics.Process.GetCurrentProcess().Kill();
+                            break;
+
+
+                        default:
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Wprowadziłeś niepoprawną liczbę, spróbuj ponownie");
+                            break;
+
+
+
+
+                    }
+                
+
+
+
+            }
+
+
+            while ((number != 0) || (number == 0));
