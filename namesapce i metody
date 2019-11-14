@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Outer.Middle.Inner;
+   
+
+
+namespace hehexd
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Prog ob1 = new Prog();
+            ob1.Add(4, 5);
+            Console.WriteLine(ob1.Add(9, 16));
+            Console.ReadKey();
+            
+
+        }
+    }
+}
+namespace Outer
+{
+    namespace Middle
+    {
+        namespace Inner
+        {
+            class Prog
+            {
+                public int x, y;
+
+                public int Add(int x, int y)
+                {
+                    return x + y;
+                }
+            }
+        }
+    }
+}
