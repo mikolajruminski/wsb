@@ -1,0 +1,34 @@
+  //napisz funckje ktora wyswietli sume cyfr w liczbie 
+            int a = 3;
+            Console.WriteLine("Wartość zmiennej a przed wywołaniem funkcji: {0}", a);
+                increment(ref a);
+            Console.WriteLine("Wartość zmiennej a przed wywołaniem funkcji: {0}", a);
+
+            Console.ReadKey();
+
+        }
+        static int  suma(int x)
+
+        {
+            int suma = 0;
+
+
+            do
+            {
+                suma = suma + x % 10;
+                x /= 10;
+            } while (x != 0);  
+
+
+            return suma;
+        }
+        static void increment(ref int x)
+        {
+            x += 15;
+            Console.WriteLine("Zmienna x wewnątrz funkcji: {0}", x);
+
+        }
+        
+
+    }
+}
