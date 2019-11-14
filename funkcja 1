@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           Console.WriteLine( Add(1, 2, 3));
+            Console.WriteLine(Add(t: 3, u: 5, y:5));
+            Console.ReadKey();
+
+        }
+
+        static void Show()
+        {
+            Console.WriteLine("XDD");
+            
+        }
+        static int Show1()
+        {
+            return 12345;
+        }
+        static void Add(int a, int b)
+        {
+            int result = a + b;
+            Console.WriteLine("wynik dodawania {1} i {2}:  {0}", result, a, b);
+           
+
+
+        }
+        
+        
+        static int Add(int t, int u, int y = 5)
+        {
+            return t + u + y;
+        }
+    }
+}
